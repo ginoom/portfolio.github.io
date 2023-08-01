@@ -1,7 +1,7 @@
 * {
     margin: 0;
-    font-family: 'Manrope', sans-serif;
     color: #fff;
+    font-family: 'Hammersmith One', sans-serif;
   }
   
 
@@ -49,6 +49,7 @@ z-index: -100;
   
   
 .content h1 {
+    font-family: 'Headland One', serif;
     position: absolute;
     top: 200px;
     left: 450px;
@@ -56,6 +57,7 @@ z-index: -100;
   }
 
 .content h2 {
+    font-family: 'Headland One', serif;
     position: absolute;
     top: 210px;
     left: 580px;
@@ -63,6 +65,7 @@ z-index: -100;
   }
 
 .O {
+    font-family: 'Headland One', serif;
     font-size: 7rem;
 }
 
@@ -105,22 +108,10 @@ z-index: -100;
 
 .profile img {
     position: absolute;
-
     max-width : 500px;
-    max-height : 500px;
-    flex-shrink: 0;
-    
+    max-height : 500px;    
 }
 
-
-figure{
-    position: relative;
-    left: 30%;
-    margin: 0;
-    padding: 0;
-    opacity: 0;
-    transition : all 1.5s ease;
-  }
 
 
 
@@ -249,6 +240,15 @@ h2 {
     flex-direction: column; /* Les images seront alignées verticalement */
     align-items: center; /* Aligne les éléments horizontalement au centre */
     gap: 15px;
+    filter: grayscale(100%); /* Applique le filtre noir et blanc */
+    transition: filter 0.5s; /* Ajoute une transition fluide */
+
+
+}
+
+.category:hover{
+    filter: grayscale(0%); /* Applique le filtre noir et blanc */
+
 }
 
 /* Style des images */
@@ -266,6 +266,13 @@ h2 {
     margin-left: 820px;
     margin-top: 60px;
     position: absolute;
+    filter: grayscale(100%); /* Applique le filtre noir et blanc */
+    transition: filter 0.5s; /* Ajoute une transition fluide */
+
+}
+
+.category2:hover{
+    filter: grayscale(0%); /* Applique le filtre noir et blanc */
 
 }
 
@@ -352,7 +359,7 @@ h2 {
     flex-direction: column; /* Les images seront alignées verticalement */
     align-items: center; /* Aligne les éléments horizontalement au centre */
     text-align: center;
-    padding: 350px;
+    padding: 250px;
     font-size: 30px;
 }
 
@@ -381,17 +388,7 @@ h2 {
     opacity: 0;
 }
 
-/* Animation de levée (fade-in) */
-@keyframes welcomeAnimation {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
 
 /* Sélecteur pour personnaliser la scrollbar */
 ::-webkit-scrollbar {
@@ -420,18 +417,28 @@ footer{
 
 }
 
-.source{
-margin-left: 20px ;
-gap:20px ;
-display: flex; /* Utilise Flexbox pour afficher les images en ligne */
-    flex-direction: row; /* Les images seront alignées verticalement */
-    text-align: flex-end;
+/* Style initial de l'image */
+#profile-img {
+    opacity: 0; /* Masquer l'image au début */
+    transition: opacity 1s ease; /* Animation de transition pour l'apparition */
 }
 
-.perso{
-    margin-left: 20px ;
-gap:20px ;
-display: flex; /* Utilise Flexbox pour afficher les images en ligne */
-    flex-direction: row; /* Les images seront alignées verticalement */
-    text-align: right;
+
+footer {
+
+  display: flex;
+  justify-content: space-between; 
+}
+
+footer img{
+    height: 50px;
+}
+
+
+.projets div :hover{
+    color: orange;
+}
+
+.rectangle:hover{
+    border: 14px solid rgb(212, 138, 0); /* Bordure du rectangle */
 }
